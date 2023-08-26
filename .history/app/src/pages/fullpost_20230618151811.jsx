@@ -61,7 +61,7 @@ export const FullPost = () => {
         </p>
       </div>
       <div className="entry-content">
-        <p>{post?.content}</p>
+        <p>{post?.content}Welcome, dear readers, to my first-ever blog! Today, I am filled with a mixture of excitement, nerves, and anticipation as I take my first steps into the world of online writing. This blog marks the beginning of a new chapter in my life, where I have chosen to embrace the power of words and share my thoughts, experiences, and passions with all of you. Join me on this incredible journey of self-expression, exploration, and growth.</p>
       </div>
     </article>
   );

@@ -1,20 +1,27 @@
 {
     "version": "0.1.0",
     "name": "blog_sol",
-    "constants": [{
+    "constants": [
+        {
             "name": "USER_SEED",
-            "type": "bytes",
-            "value": "[117, 115, 101, 114]"
+            "type": {
+                "defined": "&[u8]"
+            },
+            "value": "b\"user\""
         },
         {
             "name": "POST_SEED",
-            "type": "bytes",
-            "value": "[112, 111, 115, 116]"
+            "type": {
+                "defined": "&[u8]"
+            },
+            "value": "b\"post\""
         }
     ],
-    "instructions": [{
+    "instructions": [
+        {
             "name": "initUser",
-            "accounts": [{
+            "accounts": [
+                {
                     "name": "userAccount",
                     "isMut": true,
                     "isSigner": false
@@ -30,7 +37,8 @@
                     "isSigner": false
                 }
             ],
-            "args": [{
+            "args": [
+                {
                     "name": "name",
                     "type": "string"
                 },
@@ -42,7 +50,8 @@
         },
         {
             "name": "createPost",
-            "accounts": [{
+            "accounts": [
+                {
                     "name": "postAccount",
                     "isMut": true,
                     "isSigner": false
@@ -63,7 +72,8 @@
                     "isSigner": false
                 }
             ],
-            "args": [{
+            "args": [
+                {
                     "name": "title",
                     "type": "string"
                 },
@@ -74,11 +84,13 @@
             ]
         }
     ],
-    "accounts": [{
+    "accounts": [
+        {
             "name": "UserAccount",
             "type": {
                 "kind": "struct",
-                "fields": [{
+                "fields": [
+                    {
                         "name": "name",
                         "type": "string"
                     },
@@ -105,7 +117,8 @@
             "name": "PostAccount",
             "type": {
                 "kind": "struct",
-                "fields": [{
+                "fields": [
+                    {
                         "name": "id",
                         "type": "u8"
                     },
@@ -130,6 +143,6 @@
         }
     ],
     "metadata": {
-        "address": "9DFdJJk4vwZXWeGmp731e49HL4iGN5pZdkUtYh6FDYtq"
+        "address": "FVDLUX9ZnEp943trRR3taTCpEHbZouRRi1bkKqWHPb3j"
     }
 }

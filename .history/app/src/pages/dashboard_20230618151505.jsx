@@ -138,7 +138,7 @@ export const Dashboard = () => {
                       <div
                         className="post__card__image-2"
                         style={{
-                          backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/015/153/145/original/computer-social-media-content-3d-icon-design-png.png")`,
+                          backgroundImage: `url("https://user-images.githubusercontent.com/62637513/184338539-9cdbdc58-1e72-4c48-8203-0b7ec23d3eb0.png")`,
                         }}
                       ></div>
                       <div>

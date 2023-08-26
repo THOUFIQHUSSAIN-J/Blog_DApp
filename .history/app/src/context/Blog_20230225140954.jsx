@@ -136,8 +136,7 @@ export const BlogProvider = ({ children }) => {
         initUser,
         showModal,
         setShowModal,
-        createPost, 
-        posts
+        createPost
 
       }}
     >

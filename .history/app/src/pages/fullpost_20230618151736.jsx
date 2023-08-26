@@ -61,7 +61,7 @@ export const FullPost = () => {
         </p>
       </div>
       <div className="entry-content">
-        <p>{post?.content}</p>
+        <p>{post?.content}+Lo</p>
       </div>
     </article>
   );

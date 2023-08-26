@@ -29,7 +29,6 @@ export const BlogProvider = ({ children }) => {
   const [transactionPending, setTransactionPending] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [lastPostId, setLastPostId] = useState(0)
-  const [posts, setPosts] = useState([])
 
   const anchorWallet = useAnchorWallet()
   const { connection } = useConnection();
@@ -59,9 +58,6 @@ export const BlogProvider = ({ children }) => {
               setInitialized(true)
               setUser(user)
               setLastPostId(user.lastPostId)
-
-              const postAccount = await program.account.postAccount.all()
-              setPosts(postAccount)
             }
           }catch(err){
           console.log("No user found!!!");
@@ -104,26 +100,10 @@ export const BlogProvider = ({ children }) => {
       setTransactionPending(true)
       try{
         const [userPda] = findProgramAddressSync([utf8.encode('user'), publicKey.toBuffer()], program.programId)
-        const [postPda] = findProgramAddressSync([utf8.encode('post'),publicKey.toBuffer(), Uint8Array.from([lastPostId])], program.programId)
-
-        await program.methods
-        .createPost(title, content)
-        .accounts(
-          {
-            postAccount: postPda,
-            userAccount: userPda,
-            authority: publicKey,
-            systemProgram: SystemProgram.programId,
-          }
-        )
-        .rpc()
-
-        setShowModal(false)
+        const [postPda] = findProgramAddressSync([utf8.encode('post'),publicKey.toBuffer()], program.programId)
 
       }catch(err){
         console.log(err);
-      }finally{
-        setTransactionPending(false)
       }
     }
   }
@@ -136,8 +116,6 @@ export const BlogProvider = ({ children }) => {
         initUser,
         showModal,
         setShowModal,
-        createPost, 
-        posts
 
       }}
     >

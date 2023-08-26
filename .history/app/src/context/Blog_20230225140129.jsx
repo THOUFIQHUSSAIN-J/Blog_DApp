@@ -29,7 +29,6 @@ export const BlogProvider = ({ children }) => {
   const [transactionPending, setTransactionPending] = useState(false)
   const [showModal, setShowModal] = useState(false)
   const [lastPostId, setLastPostId] = useState(0)
-  const [posts, setPosts] = useState([])
 
   const anchorWallet = useAnchorWallet()
   const { connection } = useConnection();
@@ -59,9 +58,6 @@ export const BlogProvider = ({ children }) => {
               setInitialized(true)
               setUser(user)
               setLastPostId(user.lastPostId)
-
-              const postAccount = await program.account.postAccount.all()
-              setPosts(postAccount)
             }
           }catch(err){
           console.log("No user found!!!");
@@ -136,8 +132,7 @@ export const BlogProvider = ({ children }) => {
         initUser,
         showModal,
         setShowModal,
-        createPost, 
-        posts
+        createPost
 
       }}
     >

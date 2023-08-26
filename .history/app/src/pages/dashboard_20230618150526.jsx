@@ -38,7 +38,7 @@ export const Dashboard = () => {
           <h2 className="text-2xl font-bold">
             <div className="bg-clip-text bg-gradient-to-br from-indigo-300 colorpink"
             >
-              Blog It!
+              Blog It!!!
             </div>
           </h2>
           {connected ? (
@@ -111,7 +111,7 @@ export const Dashboard = () => {
               <div
                 className="best-post-image"
                 style={{
-                  backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/011/007/135/original/man-standing-holding-laptop-while-giving-ok-sign-with-hand-3d-render-character-illustration-free-png.png")`,
+                  backgroundImage: `url("https://user-images.githubusercontent.com/62637513/184338364-a14b7272-d1dc-49f3-9f43-3ac37dacbe85.png")`,
                 }}
               ></div>
               <div className="best-post-content">
@@ -120,7 +120,7 @@ export const Dashboard = () => {
                   My Very First Blog Site Using Solana
                 </div>
                 <div className="best-post-content-sub">
-                  Welcome, dear readers, to my first-ever blog! Today, I am filled with a mixture of excitement, nerves, and anticipation as I take my first steps into the world of online writing. This blog marks the beginning of a new chapter in my life, where I have chosen to embrace the power of words and share my thoughts, experiences, and passions with all of you. Join me on this incredible journey of self-expression, exploration, and growth.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
               </div>
             </article>
@@ -138,7 +138,7 @@ export const Dashboard = () => {
                       <div
                         className="post__card__image-2"
                         style={{
-                          backgroundImage: `url("https://static.vecteezy.com/system/resources/previews/015/153/145/original/computer-social-media-content-3d-icon-design-png.png")`,
+                          backgroundImage: `url("https://user-images.githubusercontent.com/62637513/184338539-9cdbdc58-1e72-4c48-8203-0b7ec23d3eb0.png")`,
                         }}
                       ></div>
                       <div>
